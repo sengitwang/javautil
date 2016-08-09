@@ -1,7 +1,13 @@
 package com.senit.javautil.util;
 
+import com.senit.javautil.model.ExcelEntity;
+import jxl.SheetSettings;
 import jxl.Workbook;
-import jxl.write.WritableWorkbook;
+import jxl.format.Alignment;
+import jxl.format.Colour;
+import jxl.format.VerticalAlignment;
+import jxl.write.*;
+import org.apache.commons.collections.map.LinkedMap;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -10,7 +16,6 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 /**
  * Created by sen on 2016/8/9.
@@ -44,7 +49,7 @@ public class JxlExcelUtil {
            // log.error("未找到文件fileName:" + fileName + ",message:" + e.getMessage());
             e.printStackTrace();
         } catch (IOException e) {
-            log.error("创建Excel文件失败message:" + e.getMessage());
+           // log.error("创建Excel文件失败message:" + e.getMessage());
             e.printStackTrace();
         } finally {
             //写入Exel工作表
@@ -58,7 +63,7 @@ public class JxlExcelUtil {
             os.close();
             os =null;
         }
-        log.info("导出Excel成功,文件路径:" + fileName);
+       // log.info("导出Excel成功,文件路径:" + fileName);
 
 
         return true;
@@ -70,7 +75,7 @@ public class JxlExcelUtil {
      * @param columns 导出Excel的表头数组
      * @throws Exception
      */
-    private static void addSheetContent(WritableWorkbook wwb,List<LinkedMap> objData, String sheetName,List<String> keys, LinkedMap columns, int index) throws Exception {
+    private static void addSheetContent(WritableWorkbook wwb, List<LinkedMap> objData, String sheetName, List<String> keys, LinkedMap columns, int index) throws Exception {
         try {
 			/*
 			 * 创建一个工作表、sheetName为工作表的名称、"0"为第一个工作表
