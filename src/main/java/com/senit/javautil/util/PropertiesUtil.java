@@ -1,4 +1,4 @@
-package com.senit.javautil;
+package com.senit.javautil.util;
 
 import java.util.Enumeration;
 import java.util.MissingResourceException;
