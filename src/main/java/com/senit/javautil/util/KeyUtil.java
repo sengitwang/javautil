@@ -1,4 +1,4 @@
-package cn.com.bsfit.frms.rate.util;
+package com.senit.javautil.util;
 
 import java.security.*;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package cn.com.bsfit.frms.rate.util;
+package com.senit.javautil.util;
 
 /**
  * Created by sen on 2016/10/18.

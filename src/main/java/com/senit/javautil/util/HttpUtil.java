@@ -1,6 +1,5 @@
-package cn.com.bsfit.frms.rate.util;
+package com.senit.javautil.util;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -136,7 +135,7 @@ public class HttpUtil {
 
         try {
             httpPost.setConfig(requestConfig);
-            List<NameValuePair> pairList = new ArrayList<>(params.size());
+            List<NameValuePair> pairList = new ArrayList<NameValuePair>(params.size());
             for (Map.Entry<String, Object> entry : params.entrySet()) {
                 NameValuePair pair = new BasicNameValuePair(entry.getKey(), entry
                         .getValue().toString());
