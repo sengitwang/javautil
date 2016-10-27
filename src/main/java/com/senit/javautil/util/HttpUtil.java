@@ -1,4 +1,4 @@
-package cn.com.bsfit.frms.rate.util;
+package com.senit.javautil.util;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;

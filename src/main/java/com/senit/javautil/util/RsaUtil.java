@@ -1,12 +1,16 @@
-package cn.com.bsfit.frms.rate.util;
+package com.senit.javautil.util;
 
 import javax.crypto.Cipher;
-import java.security.*;
-import java.security.spec.*;
-import java.security.interfaces.RSAPrivateKey;
-import java.security.interfaces.RSAPublicKey;
-import java.io.*;
-import java.math.BigInteger;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.security.KeyFactory;
+import java.security.PrivateKey;
+import java.security.PublicKey;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.X509EncodedKeySpec;
+
 /**
  * RSA 工具类。提供加密，解密，生成密钥对等方法。
  * 需要到http://www.bouncycastle.org下载bcprov-jdk14-123.jar。

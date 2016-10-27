@@ -1,8 +1,7 @@
-package cn.com.bsfit.frms.rate.util;
+package com.senit.javautil.util;
 
 
 import javax.crypto.Cipher;
-import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import java.security.SecureRandom;

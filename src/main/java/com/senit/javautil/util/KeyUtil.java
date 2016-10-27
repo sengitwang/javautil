@@ -1,4 +1,4 @@
-package cn.com.bsfit.frms.rate.util;
+package com.senit.javautil.util;
 
 import java.security.*;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ public class KeyUtil {
 
     public	static PublicKey pubkey ;
 
-    public static Map<String,Object> genKey() throws Exception{
+    public static Map<String,Object> genKey() throws Exception {
 
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
         kpg.initialize(2048);
@@ -32,7 +32,7 @@ public class KeyUtil {
     }
 
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         Map<String,Object> param=genKey();
         String pb=(String) param.get("PublicKey");
         String pr=(String) param.get("PrivateKey");
